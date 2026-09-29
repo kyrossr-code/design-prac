@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-card">
+        <form>
+            <fieldset>
+                <legend>Form Login</legend>
+                
+                 <h1>Forms</h1>
+
+                 <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                 </div>
+
+                 <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" minlength="8" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Student Bio:</label>
+                    <div>
+                    <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group-checkbox">
+                    <h2>Skills:</h2>
+                    <div class="form-check">
+                        <input type="checkbox" id="skill1" name="skills" value="JavaScript">
+                        <label for="skill1">JavaScript</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="skill2" name="skills" value="Python">
+                        <label for="skill2">Python</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="skill3" name="skills" value="Java">
+                        <label for="skill3">Java</label>
+                    </div>
+                </div>
+
+                <input class="btn" type="submit" value="Submit">
+                <input class="btn" type="reset" value="Reset">
+
+                <script>
+                    const form = document.querySelector('form');
+
+                    form.addEventListener('submit', function(event) {
+                        event.preventDefault();
+
+                        
+                        const name = document.getElementById('name').value;
+                        const email = document.getElementById('email').value;
+                        const password = document.getElementById('password').value;
+                        const message = document.getElementById('message').value;
+
+                        alert(`Name: ${name}\nEmail: ${email}\nPassword: ${password}\nMessage: ${message}`);
+
+                    });
+                </script>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
